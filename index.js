@@ -9,7 +9,6 @@ function themSoNVaoMang() {
 document.querySelector(".btn-kq").onclick = themSoNVaoMang;
 
 function tinhTongSoDuong() {
-  // console.log("hekki");
   var ketqua1 = document.getElementById("ketQua1");
   var tong = 0;
   console.log(arrSoN);
@@ -23,7 +22,7 @@ function tinhTongSoDuong() {
 }
 document.getElementById("btn-kq1").onclick = tinhTongSoDuong;
 
-function demSoDuong() {
+document.getElementById("btn-kq2").onclick = function demSoDuong() {
   var ketqua2 = document.getElementById("ketQua2");
   var count = 0;
   for (var i = 0; i < arrSoN.length; i++) {
@@ -32,8 +31,7 @@ function demSoDuong() {
     }
   }
   ketqua2.innerHTML = count;
-}
-document.getElementById("btn-kq2").onclick = demSoDuong;
+};
 
 function timSoNhoNhat() {
   var ketqua3 = document.getElementById("ketQua3");
@@ -117,20 +115,20 @@ function timSoNguyenToDauTien() {
   }
 }
 document.getElementById("btn-kq8").onclick = timSoNguyenToDauTien;
+
+function laSoNguyenTo(arrSoN) {
+  if (arrSoN < 2) return false;
+  for (var i = 2; i <= Math.sqrt(arrSoN); i++) {
+    if (arrSoN % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function timSoNguyenToDauTien() {
   var ketQua8 = document.getElementById("ketQua8");
-  // Hàm kiểm tra số nguyên tố
-  function laSoNguyenTo(arrSoN) {
-    if (arrSoN < 2) return false;
-    for (var i = 2; i <= Math.sqrt(arrSoN); i++) {
-      if (arrSoN % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  // Tìm số nguyên tố đầu tiên trong mảng
+  laSoNguyenTo(arrSoN);
   var firstPrime = -1;
   for (var i = 0; i < arrSoN.length; i++) {
     if (laSoNguyenTo(arrSoN[i])) {
@@ -153,8 +151,6 @@ function themSo() {
 }
 document.getElementById("btn-kq9").onclick = themSo;
 function demSoDuong() {
-  //Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?
-
   var ketQua10 = document.getElementById("ketQua10");
   var count = 0;
   for (var i = 0; i < arrThemSo.length; i++) {
@@ -167,7 +163,6 @@ function demSoDuong() {
 document.getElementById("btn-kq10").onclick = demSoDuong;
 
 function soSanhSoLuongAmDuong() {
-  //nếu số lượng trong themSoVaoMang âm và dương = nhau kết quả âm = dương bằng innerHTML
   var ketQua11 = document.getElementById("ketQua11");
   var countDuong = 0;
   var countAm = 0;
