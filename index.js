@@ -48,13 +48,24 @@ document.getElementById("btn-kq3").onclick = timSoNhoNhat;
 
 function timSoDuongNhoNhat() {
   var ketqua4 = document.getElementById("ketQua4");
-  var min = arrSoN[0];
+  var arrSoDuong = [];
+
   for (var i = 0; i < arrSoN.length; i++) {
-    if (arrSoN[i] < min && arrSoN[i] >= 0) {
-      min = arrSoN[i];
+    if (arrSoN[i] >= 0) {
+      arrSoDuong.push(arrSoN[i]);
     }
   }
-  ketqua4.innerHTML = min;
+  if (arrSoDuong.length > 0) {
+    var min = arrSoDuong[0];
+    for (var i = 1; i < arrSoDuong.length; i++) {
+      if (arrSoDuong[i] < min) {
+        min = arrSoDuong[i];
+      }
+    }
+    ketqua4.innerHTML = min;
+  } else {
+    ketqua4.innerHTML = "Không có số dương trong mảng";
+  }
 }
 document.getElementById("btn-kq4").onclick = timSoDuongNhoNhat;
 
@@ -167,7 +178,7 @@ function soSanhSoLuongAmDuong() {
   var countDuong = 0;
   var countAm = 0;
   for (var i = 0; i < arrSoN.length; i++) {
-    if (arrSoN[i] > 0) {
+    if (arrSoN[i] >= 0) {
       countDuong++;
       console.log(countDuong);
     } else if (arrSoN[i] < 0) {
@@ -178,13 +189,10 @@ function soSanhSoLuongAmDuong() {
   var kq;
   if (countDuong > countAm) {
     kq = "Số dương > số âm";
-    console.log("Số dương > số âm");
   } else if (countDuong == countAm) {
     kq = "Số dương = số âm";
-    console.log("Số dương = số âm");
   } else {
     kq = "Số dương < số âm";
-    console.log("Số dương < số âm");
   }
   ketQua11.innerHTML = kq;
 }

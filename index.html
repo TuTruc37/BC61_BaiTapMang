@@ -20,90 +20,338 @@
 
   <body>
     <div class="container">
-      <div class="mb-3">
-        <label for="" class="form-label">Nhập số n</label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id="txt-soN"
-          aria-describedby="helpId"
-          placeholder="Nhập số n"
-        />
+      <div class="beauti d-flex align-items-center">
+        <div class="mb-3 w-50 me-4">
+          <label for="" class="form-label">Nhập số n</label>
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id="txt-soN"
+            aria-describedby="helpId"
+            placeholder="Nhập số n"
+          />
+        </div>
+        <button class="btn btn-primary mt-3 btn-kq">Thêm số</button>
       </div>
-      <button class="btn btn-primary btn-kq">Thêm số</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua">👉</div>
+      <div class="p-3 bg-success bg-opacity-50 mb-3" id="ketQua">👉</div>
 
-      <button class="btn btn-primary" id="btn-kq1">Tính tổng</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua1">👉</div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              1.Tổng số dương
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq1">Tính tổng</button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua1">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              2.Đếm số dương
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq2">Đếm số</button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua2">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              3.Tìm số nhỏ nhất
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq3">
+                Tìm số nhỏ nhất
+              </button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua3">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="true"
+              aria-controls="collapseFour"
+            >
+              4.Tìm số dương nhỏ nhất
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq4">
+                Tìm số dương nhỏ nhất
+              </button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua4">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="true"
+              aria-controls="collapseFive"
+            >
+              5.Tìm số chẵn cuối cùng
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq5">
+                Tìm số chẵn cuối cùng
+              </button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua5">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="true"
+              aria-controls="collapseSix"
+            >
+              6.Đổi chỗ
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <div class="mb-3">
+                <label for="" class="form-label">Nhập số vị trí 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id="txt-viTri1"
+                  aria-describedby="helpId"
+                  placeholder="Nhập số vị trí 1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Nhập số vị trí 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id="txt-viTri2"
+                  aria-describedby="helpId"
+                  placeholder="Nhập số vị trí 2"
+                />
+              </div>
 
-      <button class="btn btn-primary" id="btn-kq2">Đếm số</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua2">👉</div>
+              <button class="btn btn-primary" id="btn-kq6">Đổi chỗ</button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua6">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="true"
+              aria-controls="collapseSeven"
+            >
+              7. Sắp xếp tăng dần
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq7">Sắp xếp</button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua7">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="true"
+              aria-controls="collapseEight"
+            >
+              8.Tìm số nguyên tố đầu tiên
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq8">
+                Tìm số nguyên tố
+              </button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua8">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="true"
+              aria-controls="collapseNine"
+            >
+              9.Đếm số nguyên
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <div class="beauti d-flex align-items-center">
+                <div class="mb-3 w-50 me-4">
+                  <label for="" class="form-label">Nhập số</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="txt-nhapSo"
+                    aria-describedby="helpId"
+                    placeholder="Nhập số"
+                  />
+                </div>
 
-      <button class="btn btn-primary" id="btn-kq3">Tìm số nhỏ nhất</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua3">👉</div>
+                <button class="btn btn-primary mt-3" id="btn-kq9">
+                  Thêm số
+                </button>
+              </div>
+              <div class="p-3 bg-success bg-opacity-50 my-3" id="ketQua9">
+                👉
+              </div>
 
-      <button class="btn btn-primary" id="btn-kq4">
-        Tìm số dương nhỏ nhất
-      </button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua4">👉</div>
-
-      <button class="btn btn-primary" id="btn-kq5">
-        Tìm số chẵn cuối cùng
-      </button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua5">👉</div>
-
-      <div class="mb-3">
-        <label for="" class="form-label">Nhập số vị trí 1</label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id="txt-viTri1"
-          aria-describedby="helpId"
-          placeholder="Nhập số vị trí 1"
-        />
+              <button class="btn btn-primary" id="btn-kq10">
+                Đếm số nguyên
+              </button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua10">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="true"
+              aria-controls="collapseTen"
+            >
+              10.So sánh số lượng số âm và dương
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <button class="btn btn-primary" id="btn-kq11">So sánh</button>
+              <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua11">
+                👉
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="" class="form-label">Nhập số vị trí 2</label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id="txt-viTri2"
-          aria-describedby="helpId"
-          placeholder="Nhập số vị trí 2"
-        />
-      </div>
-
-      <button class="btn btn-primary" id="btn-kq6">Đổi chỗ</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua6">👉</div>
-
-      <button class="btn btn-primary" id="btn-kq7">Sắp xếp</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua7">👉</div>
-
-      <button class="btn btn-primary" id="btn-kq8">Tìm số nguyên tố</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua8">👉</div>
-
-      <div class="mb-3">
-        <label for="" class="form-label">Nhập số</label>
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id="txt-nhapSo"
-          aria-describedby="helpId"
-          placeholder="Nhập số"
-        />
-      </div>
-      <button class="btn btn-primary" id="btn-kq9">Thêm số</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua9">👉</div>
-
-      <button class="btn btn-primary" id="btn-kq10">Đếm số nguyên</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua10">👉</div>
-
-      <button class="btn btn-primary" id="btn-kq11">So sánh</button>
-      <div class="p-3 bg-success bg-opacity-50 mt-3" id="ketQua11">👉</div>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
